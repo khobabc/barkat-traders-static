@@ -1419,3 +1419,21 @@ h1, h2, h3, h4, h5,
 .custom-pagination span {
   background: #e6e6e6;
   color: #000; }
+
+.logo-image-nav {
+  height: 48px;
+}
+.logo-image-main {
+  height: 240px;
+  margin-bottom: 30px;
+}
+.by-third-image {
+  height: 200px;
+}
+.veg-image {
+  height: 200px;
+  overflow: hidden;
+}
+.gallery-image {
+  height: 300px;
+}
