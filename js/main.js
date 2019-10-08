@@ -8,6 +8,34 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
+	// fetch("https://api.sendgrid.com/v3/mail/send", {
+	// 	method: 'POST',
+	// 	body: {
+	// 		personalizations: [
+	// 			{
+	// 				to: [
+	// 					{
+	// 						email: "hdraleee@gmail.com"
+	// 					}
+	// 				]
+	// 			}
+	// 		],
+	// 		from: {
+	// 			email: 'website@barkat-traders.com'
+	// 		},
+	// 		subject: "Testing Mail",
+	// 		content: [
+	// 			{
+	// 				type: 'text/plain',
+	// 				value: 'This is the mail content'
+	// 			}
+	// 		]
+	// 	},
+	// 	headers: {
+	// 		Authorization: "Bearer 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",
+	// 		"Content-Type": 'application/json'
+	// 	}
+	// })
 	
 
 	var siteMenuClone = function() {
