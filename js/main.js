@@ -8,37 +8,69 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
-	// fetch("https://api.sendgrid.com/v3/mail/send", {
-	// 	method: 'POST',
-	// 	body: {
-	// 		personalizations: [
-	// 			{
-	// 				to: [
-	// 					{
-	// 						email: "hdraleee@gmail.com"
-	// 					}
-	// 				]
-	// 			}
-	// 		],
-	// 		from: {
-	// 			email: 'website@barkat-traders.com'
-	// 		},
-	// 		subject: "Testing Mail",
-	// 		content: [
-	// 			{
-	// 				type: 'text/plain',
-	// 				value: 'This is the mail content'
-	// 			}
-	// 		]
-	// 	},
-	// 	headers: {
-	// 		Authorization: "Bearer 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",
-	// 		"Content-Type": 'application/json'
-	// 	}
-	// })
-	
+		function sendEmail(from, message) {
+			fetch(SENDGRID_SERVER, {
+				method: 'POST',
+				body: JSON.stringify({
+					to: SENDGRID_TO,
+					from: {
+						email: from.email,
+						name: from.name
+					},
+					subject: "Barkat Traders - Contact Form",
+					text: message
+				}),
+				headers: {
+					"Content-Type": 'application/json'
+				}
+			});
+		}
 
-	var siteMenuClone = function() {
+		function validate() {
+			const fname = $('#fname').val().trim();
+			const email = $('#email').val().trim();
+			const message = $('#message').val().trim();
+
+			let html = '';
+			if (!fname) {
+				html += '<li>FUll Name</li>';
+			}
+			if (!email) {
+				html += '<li>Email</li>';
+			}
+			if (!message) {
+				html += '<li>Message</li>';
+			}
+
+			if (html) {
+				html = 'Please provide values for following fields: <ul>' + html + '</ul>'
+			}
+			return html;
+		}
+
+		$( "#send-mail" ).submit(function( event ) {
+			event.preventDefault();
+			const error = document.getElementById('form-error-placeholder');
+			error.style.display = 'none';
+
+			const html = validate();
+			if (html) {
+				error.innerHTML = html;
+				error.style.display = 'block';
+				return;
+			}
+
+			sendEmail({
+				name: $('#fname').val().trim(),
+				email: $('#email').val().trim()
+			},$('#message').val().trim())
+
+			$('#fname').val('');
+			$('#email').val('');
+			$('#message').val('')
+		});
+
+		var siteMenuClone = function() {
 
 		$('.js-clone-nav').each(function() {
 			var $this = $(this);
