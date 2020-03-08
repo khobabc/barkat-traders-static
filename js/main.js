@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
 
 			let html = '';
 			if (!fname) {
-				html += '<li>FUll Name</li>';
+				html += '<li>Full Name</li>';
 			}
 			if (!email) {
 				html += '<li>Email</li>';
