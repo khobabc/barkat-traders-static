@@ -10,6 +10,8 @@
   <meta name="keywords" content="wool" />
   <meta name="author" content="Haider Ali Anjum" />
 
+  <link rel="icon" type="image/png" href="images/barkat-traders favicon.png">
+
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -30,9 +32,15 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    var SENDGRID_SERVER = 'https://sendgrid.barkat-traders.com/send';
-    var SENDGRID_TO = 'rashid.mahmood@barkat-traders.com';
+    // EmailJS configuration
+    var EMAILJS_PUBLIC_KEY = 'yCgwIWXoWe_klsqNy';
+    var EMAILJS_SERVICE_ID = 'service_kw4807v';
+    var EMAILJS_TEMPLATE_ID = 'template_f7dm8z3';
+    (function () {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    })();
   </script>
 </head>
 
@@ -71,6 +79,7 @@
                 <ul class="dropdown">
                   <li><a href="#section-wool" class="nav-link">Wool</a></li>
                   <li><a href="#section-fishing-net" class="nav-link">Fishing Nets</a></li>
+                  <li><a href="#section-polyester" class="nav-link">Polyester Waste</a></li>
                   <li><a href="#section-rice" class="nav-link">Rice</a></li>
                 </ul>
               </li>
@@ -283,6 +292,64 @@
               <h3>Supply Globally</h3>
               <p class="text-justify">To date over 3 lakh tonnes of waste has been removed from the ocean and beaches and
                 supplied to companies across the globe for reuse.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-section border-bottom" id="section-polyester">
+    <div class="container">
+      <div class="row justify-content-center mb-5" data-aos="fade-up">
+        <div class="col-md-7 text-center border-primary">
+          <h2 class="mb-0 text-primary">Polyester Waste</h2>
+          <p class="color-black-opacity-5">Recovering polyester yarn waste from Pakistan&rsquo;s top producers for
+            Europe&rsquo;s geo-textile &amp; fusion industries</p>
+        </div>
+      </div>
+
+      <div class="row align-items-stretch">
+        <p class="text-justify">We collect and grade polyester yarn waste sourced directly from the leading spinning and
+          weaving mills of Pakistan. Every consignment is carefully sorted by type and quality, then exported to Europe
+          where it is reprocessed into high-value raw material for the geo-textile and fusion (non-woven) industries, another step in our commitment to recycling and a sustainable circular economy.</p>
+        <ul class="ul-check list-unstyled success">
+          <li>POY &mdash; Partially Oriented Yarn waste</li>
+          <li>DTY &mdash; Draw Textured Yarn waste</li>
+          <li>FDY &mdash; Fully Drawn Yarn waste</li>
+          <li>HT &mdash; High Tenacity yarn waste</li>
+          <li>Water-jet loom waste &amp; other polyester waste</li>
+        </ul>
+      </div>
+
+      <div class="row align-items-stretch mt-4">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="unit-4 d-flex">
+            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-container"></span></div>
+            <div>
+              <h3>Collect &amp; Sort</h3>
+              <p class="text-justify">We source polyester waste &mdash; POY, DTY, FDY, HT and water-jet &mdash; from
+                Pakistan&rsquo;s top yarn producers and sort it by type, colour and grade.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="unit-4 d-flex">
+            <div class="unit-4-icon mr-4"><span class="text-primary icon-recycle"></span></div>
+            <div>
+              <h3>Process &amp; Bale</h3>
+              <p class="text-justify">Graded waste is cleaned, compacted and baled to consistent export quality, ready
+                to be re-fiberised and reused instead of going to landfill.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="unit-4 d-flex">
+            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-worldwide"></span></div>
+            <div>
+              <h3>Export to Europe</h3>
+              <p class="text-justify">Our baled polyester is exported to European partners for use in geo-textiles and
+                the fusion / non-woven fabric industry across diverse applications.</p>
             </div>
           </div>
         </div>
