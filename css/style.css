@@ -1227,6 +1227,10 @@ h1, h2, h3, h4, h5,
   line-height: 0;
   font-size: 3rem; }
 
+.unit-4 .unit-4-icon span[class^="icon-"]::before,
+.unit-4 .unit-4-icon span[class*=" icon-"]::before {
+  line-height: 1; }
+
 .unit-4 h3 {
   font-size: 20px; }
 
