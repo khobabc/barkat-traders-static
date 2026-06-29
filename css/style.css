@@ -1227,6 +1227,10 @@ h1, h2, h3, h4, h5,
   line-height: 0;
   font-size: 3rem; }
 
+.unit-4 .unit-4-icon span[class^="icon-"]::before,
+.unit-4 .unit-4-icon span[class*=" icon-"]::before {
+  line-height: 1; }
+
 .unit-4 h3 {
   font-size: 20px; }
 
@@ -1436,4 +1440,57 @@ h1, h2, h3, h4, h5,
 }
 .gallery-image {
   height: 300px;
+}
+
+/* ----- Custom additions / responsive fixes ----- */
+
+/* Outline button used in the hero */
+.btn-outline-white {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff; }
+  .btn-outline-white:hover,
+  .btn-outline-white:focus {
+    background: #fff;
+    color: #000 !important; }
+
+/* Keep the hero readable and tappable on small screens */
+@media (max-width: 575.98px) {
+  .site-blocks-cover, .site-blocks-cover .row {
+    min-height: 480px;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px; }
+  .site-blocks-cover .btn {
+    display: inline-block;
+    margin-bottom: 10px; }
+  .site-blocks-cover p .btn + .btn {
+    margin-left: 0 !important; }
+}
+
+/* Product / service card images should never overflow their column */
+.by-third-image {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 10px; }
+
+.gallery-image {
+  width: 100%;
+  object-fit: cover; }
+
+/* Service / product cards: stack icon above text on narrow screens */
+@media (max-width: 575.98px) {
+  .unit-4.d-flex {
+    flex-direction: column; }
+  .unit-4 .unit-4-icon.mr-4 {
+    margin-right: 0 !important;
+    margin-bottom: 10px; }
+}
+
+/* Footer tidy-up on mobile */
+@media (max-width: 767.98px) {
+  .site-footer .footer-heading {
+    margin-top: 20px; }
 }

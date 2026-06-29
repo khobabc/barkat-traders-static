@@ -1,0 +1,16 @@
+{
+  "name": "Barkat Traders",
+  "short_name": "Barkat Traders",
+  "description": "General traders, importers & exporters since 2010 — used woolen clothing, recovered fishing nets, polyester yarn waste and premium basmati rice.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f9bf29",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
